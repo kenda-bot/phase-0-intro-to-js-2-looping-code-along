@@ -1,12 +1,13 @@
-const writeCards = (array,surprise)=>{
-    let emptyArray =[]
-
-    for (item of array){
-         emptyArray.push(`Thank you, ${item}, for the wonderful ${surprise} gift!`) 
+function writeCards(names, event) {
+    let messages = []
+    for (let i = 0; i < names.length ; i++) {
+     const message = `Thank you, ${names[i]}, for the wonderful ${event} gift!`;
+     messages.push(message);
     }
-    return emptyArray
+    return messages;
+  }
 
-}
+
 
 const countDown = (number)=>{
     for (let i = number;i>=0;i--){
